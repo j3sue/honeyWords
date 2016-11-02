@@ -246,9 +246,10 @@ def main():
     if len(pw_list) > 0:
         for p in pw_list:
             honeyWords = []
-            honeyWords = generate_passwords(n,p)
+            honeyWords = generate_passwords(n-1,p)
             
             # shuffle their order
+            honeywords.append(p)
             random.shuffle(honeyWords)    
     
             target = open (outfile, 'a')
